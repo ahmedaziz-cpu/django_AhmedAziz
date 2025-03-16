@@ -35,6 +35,6 @@
 ![Captura](Captures/admin4.png)
 
 ## 4.Captures del pgAdmin
-![Captura](Captures/pdAdmin1.png)
+![Captura](Captures/pgAdmin1.png)
 ![Captura](Captures/pgAdmin2.png)
 ![Captura](Captures/pgAdmin3.png)
