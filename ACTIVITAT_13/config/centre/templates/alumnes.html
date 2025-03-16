@@ -1,0 +1,129 @@
+{% include "head/header.html" %}
+
+{% block content %}
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #e9ecef;
+        margin: 0;
+        padding: 0;
+    }
+
+    h2 {
+        color: #333;
+        text-align: center;
+        margin-top: 20px;
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    p {
+        text-align: center;
+        font-size: 18px;
+        color: #555;
+        margin-bottom: 20px;
+    }
+
+    table {
+        width: 90%;
+        margin: 20px auto;
+        border-collapse: collapse;
+        background-color: #fff;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+    }
+
+    th {
+        background-color: #3a6ea5;
+        color: #fff;
+        padding: 10px;
+        font-size: 16px;
+        text-align: left;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+
+    td {
+        background-color: #f9f9f9;
+        padding: 12px;
+        border-bottom: 1px solid #ddd;
+        color: #333;
+        font-size: 14px;
+    }
+
+    tr:nth-child(even) td {
+        background-color: #f1f1f1;
+    }
+
+    tr:hover td {
+        background-color: #d3e1f4;
+    }
+
+    a {
+        color: #3a6ea5;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    a:hover {
+        color: #c74b2d;
+    }
+
+    td a {
+        display: inline-block;
+        padding: 6px 12px;
+        background-color: #3a6ea5;
+        color: #fff;
+        border-radius: 4px;
+        text-align: center;
+    }
+
+    td a:hover {
+        background-color: #c74b2d;
+    }
+
+    .table-container {
+        width: 80%;
+        margin: 0 auto;
+        overflow-x: auto;
+    }
+
+</style>
+
+<p>Dades Alumnes</p>
+
+<h2>Informació alumnes</h2>
+<div class="table-container">
+  <table>
+    <thead>
+      <tr>
+        <th>Nom</th>
+        <th>Cognom</th>
+        <th>Correu electrònic</th>
+        <th>Edat</th>
+        <th>Gènere</th>
+        <th>Curs</th>
+        <th>Moduls</th>
+        <th>Tutor</th>
+        <th>Detalls</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for alumne in alumnes %}
+        <tr>
+          <td>{{ alumne.name }}</td>
+          <td>{{ alumne.surname }}</td>
+          <td>{{ alumne.email }}</td>
+          <td>{{ alumne.edat }}</td>
+          <td>{{ alumne.genere }}</td>
+          <td>{{ alumne.curs }}</td>
+          <td>{{ alumne.moduls }}</td>
+          <td>{{ alumne.tutor }}</td>
+          <td><a href="{% url 'alumnes_detalles' alumne.pk %}">Ver Detalles</a></td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+{% endblock %}

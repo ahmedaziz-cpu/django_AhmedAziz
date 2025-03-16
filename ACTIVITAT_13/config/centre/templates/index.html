@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Centre</title>
+
+    {% include "head/header.html" %}
+
+    <style>
+      body {
+        font-family: 'Arial', sans-serif;
+        background-image: url('https://media.timtul.com/media/users/Institut_TIC_de_Barcelona_Color_20231115152858.png');
+        background-size: 80%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+        color: #0f04aa;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 20px;
+      }
+
+      h1 {
+        font-size: 3em;
+        margin: 0;
+        font-weight: bold;
+      }
+
+    </style>
+
+</head>
+<body>
+
+  <h1>Benvinguts a la app</h1>
+
+  {% block content %}
+  {% endblock %}
+
+</body>
+</html>

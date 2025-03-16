@@ -1,0 +1,43 @@
+
+
+<ul class="nav-list">
+  <li><a class="active" href="{% url 'index' %}">Home</a></li>
+  <li><a href="{% url 'professors' %}">Professors</a></li>
+  <li><a href="{% url 'alumnes' %}">Alumnes</a></li>
+  <li><a href="{% url 'form' %}">Afegir Alumnes</a></li>
+  <li><a href="{% url 'form1' %}">Afegir Professors</a></li>
+</ul>
+
+<style>
+
+  .nav-list {
+      list-style-type: none;
+      padding: 0;
+      text-align: center;
+      margin-top: 20px;
+  }
+
+  .nav-list li {
+      display: inline-block;
+      margin: 0 15px;
+  }
+
+  .nav-list a {
+      text-decoration: none;
+      color: #fff;
+      background-color: #3a6ea5;
+      padding: 10px 20px;
+      border-radius: 4px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+  }
+
+  .nav-list a:hover {
+      background-color: #ff6600;
+  }
+
+  .nav-list a.active {
+      background-color: #ff6600;
+      color: white;
+  }
+</style>

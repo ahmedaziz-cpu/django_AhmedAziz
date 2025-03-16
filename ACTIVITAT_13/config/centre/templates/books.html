@@ -1,0 +1,20 @@
+{% extends "index.html" %}
+{% block content %}
+
+<p>Dades llibres</p>
+
+<h2>Informació Llibres</h2>
+
+<div style="background-color: darkslateblue">
+  <label> id: </label> {{ books.id }}
+</div>
+<div>
+  <label> Autor:</label>  {{ books.autor }}
+</div>
+<div>
+  <label> titol:</label>  {{ books.titol }}
+</div>
+
+
+
+{% endblock %}

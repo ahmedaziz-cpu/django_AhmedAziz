@@ -1,0 +1,95 @@
+{% include "head/header.html" %}
+
+{% block content %}
+
+<p>Detalls del professor</p>
+
+<h2>Informació del professor</h2>
+
+{% if professor %}
+  <table>
+    <thead>
+      <tr>
+        <th>Nom</th>
+        <th>Cognom</th>
+        <th>Correu electrònic</th>
+        <th>Curs</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{ professor.name }}</td>
+        <td>{{ professor.surname }}</td>
+        <td>{{ professor.email }}</td>
+        <td>{{ professor.curs }}</td>
+      </tr>
+    </tbody>
+  </table>
+{% else %}
+  <p class="no-professor">No s'ha trobat cap Professor</p>
+{% endif %}
+
+<style>
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  h2 {
+    color: #3a6ea5;
+    font-size: 32px;
+    margin-top: 20px;
+    font-weight: bold;
+  }
+
+  p {
+    color: #666;
+    font-size: 18px;
+    margin: 10px 0;
+  }
+
+  table {
+    width: 60%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  th {
+    background-color: #3a6ea5;
+    color: white;
+    padding: 12px 15px;
+    text-align: center;
+    font-size: 16px;
+  }
+
+  td {
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+  }
+
+  tr:nth-child(even) td {
+    background-color: #f9f9f9;
+  }
+
+  tr:hover {
+    background-color: #f1f1f1;
+  }
+
+  p.no-professor {
+    font-size: 18px;
+    color: #ff6600;
+    font-weight: bold;
+  }
+
+</style>
+
+{% endblock %}
